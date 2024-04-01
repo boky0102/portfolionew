@@ -28,6 +28,7 @@ body{
   font-style: normal;
   color: var(--font-color);
   position: relative;
+  box-sizing: border-box;
 }
 
 .svg-triangle{
@@ -46,19 +47,20 @@ body{
 
 .navigation{
   position: relative;
-  width: 54px;
-  height: 300px;
+  width: 4rem;
+  height: 18rem;
+  background-color: blue;
   z-index: 3;
   margin-left: 40px;
 }
 
 .nav-circle{
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border: 2px solid var(--action);
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 2rem;
   z-index: 2;
   background-color: var(--main);
 }
@@ -67,7 +69,7 @@ body{
   position: absolute;
   width: 20px;
   height: 300px;
-  border: 1px solid var(--action);
+  border: 0.10rem solid var(--action);
   border-radius: 25%;
   top: 0;
   left: 30%;
@@ -97,7 +99,7 @@ body{
 }
 
 #line3{
-  left: 35%;
+  left: 30%;
 }
 
 #line4{
@@ -105,5 +107,21 @@ body{
 }
 
 #line5{
+  left: 50%;
+}
+
+#line6{
   left: 60%;
+}
+
+#line7{
+  left: 70%;
+}
+
+#line8{
+  left: 80%;
+}
+
+#line9{
+  left: 90%;
 }

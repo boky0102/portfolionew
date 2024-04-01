@@ -52,15 +52,18 @@ document.addEventListener("mousemove", (event) => {
             
             if(grad){
                 const startingPos = calculateStartingRelativePos(y, 20);
-                const relativeDuration = getRealtiveDuration(y, 3);
+                const relativeDuration = getRealtiveDuration(y, 4);
                 grad.setAttribute("y1", startingPos.y1);
                 grad.setAttribute("y2", startingPos.y2);
                 gsap.to(grad, {
                     duration: relativeDuration,
-                    attr: {y1: "0%", y2: "10%"},
+                    attr: {y1: "-20%", y2: "0%"},
                     onCompleteParams: ["attr"],
                     onComplete: () => {
-
+                        if(grad){
+                            grad.setAttribute("y1", "0");
+                            grad.setAttribute("y2", "0");
+                        }
                     }
                 }); 
             }
