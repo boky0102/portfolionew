@@ -45,34 +45,60 @@ body{
 }
 
 
-.navigation{
+
+.nav-progress-container{
+  container-type: inline-size;
+  container-name: navigation;
   position: relative;
-  width: 4rem;
-  height: 18rem;
-  background-color: blue;
+  width: 80px;
   z-index: 3;
   margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.navigation{
+  display: flex;
+}
+
+.progress-right-container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.progress-right{
+  width: 100px;
+  height: 20px;
+  background-color: var(--action);
 }
 
 .nav-circle{
   position: relative;
-  width: 3rem;
-  height: 3rem;
+  width: 80cqi;
+  height: 80cqi;
+  
   border: 2px solid var(--action);
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 2rem;
   z-index: 2;
   background-color: var(--main);
+  
 }
 
 .nav-progress{
   position: absolute;
-  width: 20px;
-  height: 300px;
+  width: 20cqi;
+  height: 78%;
+  margin-top: 3rem;
   border: 0.10rem solid var(--action);
-  border-radius: 25%;
   top: 0;
-  left: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -125,3 +151,53 @@ body{
 #line9{
   left: 90%;
 }
+
+main{
+  display: flex;
+}
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .nav-progress-container{
+      width: 40px;
+      margin-left: 10px;
+    }
+    .svg-triangle{
+      height: 100px;
+    }
+    .home-section{
+      height: calc(100vh - 100px);
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+  .nav-progress-container{
+    width: 40px;
+    margin-left: 15px;
+  }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+  .nav-progress-container{
+    width: 40px;
+    margin-left: 20px;
+  }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+  .nav-progress-container{
+    width: 50px;
+    margin-left: 25px;
+  }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+  .nav-progress-container{
+    width: 80px;
+  }
+ } 
